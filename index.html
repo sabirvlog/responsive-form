@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sabir Khan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated login form</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="main">
+            <div class="title">
+                <h2>Login form</h2>
+            </div>
+        <div class="mail">
+            <input type="text" name="email" id="mail" placeholder="Email or Username" required>
+        </div>
+        <div class="psw">
+            <input class="pswd" type="password" name="password" placeholder="Password" required>
+            <span class="show">SHOW</span>
+        </div>
+        <div class="button">
+            <input type="submit" name="submit" value="LOGIN">
+        </div>
+        <div class="text-box">
+            <p>Or Login With</p>
+        </div>
+        <div class="btn">
+            <a class="blue" href="#">Facebook</a>
+            <a class="red" href="#">Google</a>
+        </div>
+        <div class="foot">
+            <p>Not a member?</p>
+            <a href="#">SignUp Now</a>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var input = document.querySelector('.pswd');
+        var show = document.querySelector('.show');
+        show.addEventListener('click', active);
+        function active(){
+          if(input.type === "password"){
+            input.type = "text";
+            show.style.color = "#1DA1F2";
+            show.textContent = "HIDE";
+          }else{
+            input.type = "password";
+            show.textContent = "SHOW";
+            show.style.color = "#111";
+          }
+        }
+      </script>
+</body>
+</html>
